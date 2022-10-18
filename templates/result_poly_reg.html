@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<form class="section-features js--section-features"  method="post" id="resultpoly">
+    <div class="row">
+      <h2>Predicted Production in Quintal &mdash; Polynomial Regression:</h2>
+
+      <h3><p class="long-copy">Production is predicted to be: {{output}} quintal</p></h3>
+
+      <h3><p class="long-copy">The average production is: {{medianreg}} quintal</p></h3>
+
+      <h3><p class="long-copy">The time taken to predict is {{time}} s.</p></h3>
+    </div>
+
+</form>
+{% endblock %}

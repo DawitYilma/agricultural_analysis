@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+
+      <form class="section-features js--section-features" action="/predict3" method="post">
+
+        <div class="row">
+          <h2>Upload Your Image &mdash; Plant Diseased:</h2>
+          <input type="file" class="form-control" name="image" id="image">
+          <hr>
+          <hr>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" value="Scan">
+          </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+{% endblock %}

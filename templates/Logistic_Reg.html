@@ -1,0 +1,37 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+      <form class="section-features js--section-features" action="/predict_logisticreg#resultreg" method="post" id="logisticreg">
+
+        <div class="row">
+          <h2>Enter The Values Collected &mdash; See Example:</h2>
+          <h3>Example:</h3>
+          <p class="long-copy">
+            0.666666667	0.019981155	0.126579148	0.056332578	0.088235294	0	0	0	0	0.005291005	0	0	0	0	0	0.027027027	0.011374408	0.00591716	0.027624309	0.02247191	0.004314064	0.017382413	0.031372549	0	0	0.601390029	0.689969382	0.475055363	0.428571429	0.041649818
+
+          </p>
+          <div class="col-sm-10">
+            <textarea class="form-control" rows="5" id="space" name="space">None</textarea>
+
+          </div>
+
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" value="Scan">
+        </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+
+
+  </div>
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+      <form class="section-features js--section-features" action="/predict_svm#resultsvm" method="post" id="svm">
+
+        <div class="row">
+          <h2>Enter The Values Collected &mdash; See Example:</h2>
+          <h3>Example:</h3>
+          <p class="long-copy">
+            -0.764418387	0.105779259	0.275373833	0.153212739	0.232376326	0.114285059	0.282305001	-0.124457667	0.020908724	0.186270461	0.025323488	0.203568407	0.019544545	-0.016261781	0.069706347	0.022407793	0.044134768	0.006930415	0.111394215	0.016357077	-0.013073509	-0.061736423	-0.066518272	0.009518122	-0.030708285	-0.034313612	0.010130774	0.004679538	-0.025561588	-0.029220266	-0.077542138	-0.009494742	-0.026190799	0.021113003	0.030780342
+
+          </p>
+          <div class="col-sm-10">
+            <textarea class="form-control" rows="5" id="space" name="space">None</textarea>
+
+          </div>
+
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" value="Scan">
+        </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+
+
+  </div>
+
+
+</div>
+
+{% endblock %}

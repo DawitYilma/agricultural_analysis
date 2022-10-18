@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+      <form class="section-features js--section-features" action="/predict_Lasso_reg#resultlasso" method="post" id="lassoreg">
+
+        <div class="row">
+          <h2>Enter The Values Collected &mdash; See Example:</h2>
+
+          <h3>Example:</h3>
+          <p class="long-copy">
+            0.666666667	0.504713943	0.361369781	0.917546338	0	0.021909233	0	0.1	0	0	0	0	0.035294118	0.442064707	0.526296854	0.309693114	0.012535382
+
+          </p>
+
+          <div class="">
+            <textarea class="form-control" rows="5" id="space" name="space">None</textarea>
+          </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" value="Scan">
+        </div>
+          </div>
+        </div>
+      </form>
+
+
+
+{% endblock %}

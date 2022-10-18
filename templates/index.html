@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Omnifood is a premium food delivery service with the mission to bring affordable and healty meals to as many people as possible.">
+
+        <link rel="stylesheet" type="text/css" href="../static/vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../static/vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="../static/vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="../static/vendors/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="../static/resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../static/resources/css/queries.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <title>Agriculture Analytics</title>
+
+        <link rel="apple-touch-icon" sizes="57x57" href="../static/resources/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../static/resources/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../static/resources/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../static/resources/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../static/resources/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../static/resources/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../static/resources/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../static/resources/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../static/resources/favicons/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="../static/resources/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="../static/resources/favicons/favicon-194x194.png" sizes="194x194">
+        <link rel="icon" type="image/png" href="../static/resources/favicons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="../static/resources/favicons/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="../static/resources/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="../static/resources/favicons/manifest.json">
+        <link rel="shortcut icon" href="../static/resources/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="../static/resources/favicons/mstile-144x144.png">
+        <meta name="msapplication-config" content="../static/resources/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="row">
+                  <a href="{{url_for('index')}}">
+                    <img src="../static/resources/img/agri2.png" alt="Omnifood logo" class="logo">
+                    </a>
+                    <img src="../static/resources/img/agri2.png" alt="Omnifood logo" class="logo-black">
+                    <ul class="main-nav js--main-nav">
+                        <li><a href="#production_analysis">Production Analysis</a></li>
+                        <li><a href="#Productivity_analysis">Yield Analysis</a></li>
+                        <li><a href="#Authors">Authors</a></li>
+                        <li><a href="#plans">Sign up</a></li>
+                    </ul>
+                    <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+                </div>
+            </nav>
+            <div class="hero-text-box">
+                <h1>Welcome to Agriculture Analytics.<br>With us you will have a  better result.</h1>
+
+
+
+                <a  href="{{url_for('Polynomial_reg')}}#polyregg" class="btn btn-full js--scroll-to-plans">Predict Production</a>
+                <a class="btn btn-ghost js--scroll-to-start" href="{{url_for('Random_Forst_Class')}}#randforstt">Predict Productivity/Yield</a>
+            </div>
+
+        </header>
+
+        {% block content%}
+
+        {%endblock%}
+
+        <section class="section-features js--section-features" id="production_analysis">
+            <div class="row">
+                <h2>Regression Model &mdash; Polynomial Regression</h2>
+                <p class="long-copy">
+                  Regression models are machine learning models used to predict target variables on a continuous scale. Polynomial Regression is a regression model done by adding powers of each
+feature as new features, then train a linear model on this extended set of features.
+                </p>
+            </div>
+
+
+            </div>
+        </section>
+
+        <section class="section-meals">
+            <ul class="meals-showcase clearfix">
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/poly_reg_total_edi.png" alt="Korean bibimbap with egg and vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/lasso_total_edi.png" alt="Simple italian pizza with cherry tomatoes">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/multi_leanear_reg_total_edi.png" alt="Chicken breast steak with vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/svr_total_edi.png" alt="Autumn pumpkin soup">
+                    </figure>
+                </li>
+            </ul>
+            <ul class="meals-showcase clearfix">
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/poly_reg_pre_tota_edi.png" alt="Paleo beef steak with vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/lasso_pred_tota_edi.png" alt="Healthy baguette with egg and vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/multi_leanear_reg_pre_tota_edi.png" alt="Burger with cheddar and bacon">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/svr_pre_tota_edi.png" alt="Granola with cherries and strawberries">
+                    </figure>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section-plans js--section-plans" id="plans">
+
+              <div class="col span-1-of-3">
+                  <div class="plan-box js--wp-4">
+                      <div>
+                          <h3>Polynomial Regression</h3>
+                          <p class="plan-price">>95% <span>/ accuracy</span></p>
+                          <p class="plan-price-meal">y = b0 + b1X1 + b2 X21  + … + bnXn1</p>
+                      </div>
+                      <div>
+                          <ul>
+                              <li><i class="ion-ios-checkmark-empty icon-small"></i>For All Farmers and Experts</li>
+                              <li><i class="ion-ios-checkmark-empty icon-small"></i>Functional 24/7</li>
+                              <li><i class="ion-ios-checkmark-empty icon-small"></i><a href="{{url_for('Poly_data')}}#poly_data">The database can be seen here</a></li>
+                              <li><i class="ion-ios-checkmark-empty icon-small"></i><a href="{{url_for('Polynomial_model')}}">The model can be found here</a></li>
+                          </ul>
+                      </div>
+                      <div>
+                          <a href="{{url_for('Polynomial_reg')}}#polyregg" class="btn btn-full">Scan</a>
+                      </div>
+                  </div>
+              </div>
+                <div class="col span-1-of-3">
+                    <div class="plan-box js--wp-4">
+                        <div>
+                            <h3>Lasso Regression</h3>
+                            <p class="plan-price">>85% <span>/ accuracy</span></p>
+                            <p class="plan-price-meal">J(θ) = MSE(θ) + α∑i = 1n |θ|i</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>For All Farmers and Experts</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Functional 24/7</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Access to well train data</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i><a href="{{url_for('Lasso_model')}}">The model can be found here</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="{{url_for('Lasso_reg')}}#lassoreg" class="btn btn-full">Scan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col span-1-of-3">
+                    <div class="plan-box">
+                        <div>
+                            <h3>Multi_Linear Regression</h3>
+                            <p class="plan-price">>85% <span>/ accuracy</span></p>
+                            <p class="plan-price-meal">y = b0 + b1X1 + b2 X2  + … + bnXn</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>For All Farmers and Experts</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Functional 24/7</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Access to well train data</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i><a href="{{url_for('Multi_Linear_model')}}">The model can be found here</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="{{url_for('Multi_Linear')}}#multilinear" class="btn btn-ghost">Scan</a>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+
+
+        <section class="section-features js--section-features" id="Productivity_analysis">
+          <h2>Classification Model &mdash; Random_Forst Classification</h2>
+            <div class="row">
+
+                <p class="long-copy">
+                  Classification models are machine learning models used to predict target variables on a discrite value (classification) scale. Random Forest
+ is an ensemble of Decision Trees, generally trained via the bagging method (or sometimes pasting), typically with max_samples set to the size of the training set.
+                </p>
+            </div>
+
+
+            </div>
+        </section>
+
+        <section class="section-meals">
+            <ul class="meals-showcase clearfix">
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/randforst_total.png" alt="Korean bibimbap with egg and vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/logistic_total.png" alt="Simple italian pizza with cherry tomatoes">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/svm_total.png" alt="Chicken breast steak with vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/ksvm_total.png" alt="Autumn pumpkin soup">
+                    </figure>
+                </li>
+            </ul>
+            <ul class="meals-showcase clearfix">
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/knn_total.png" alt="Paleo beef steak with vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/dectree_total.png" alt="Healthy baguette with egg and vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/naivebayes_total.png" alt="Burger with cheddar and bacon">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="../static/resources/img/white.png" alt="Granola with cherries and strawberries">
+                    </figure>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section-plans js--section-plans" id="plans">
+
+              <div class="col span-1-of-3">
+                  <div class="plan-box js--wp-4">
+                      <div>
+                          <h3>Random Forest Classification</h3>
+                          <p class="plan-price">>70% <span>/ accuracy</span></p>
+                          <p class="plan-price-meal"></p>
+                      </div>
+                      <div>
+                          <ul>
+                              <li><i class="ion-ios-checkmark-empty icon-small"></i>For All Farmers and Experts</li>
+                              <li><i class="ion-ios-checkmark-empty icon-small"></i>Functional 24/7</li>
+                              <li><i class="ion-ios-checkmark-empty icon-small"></i><a href="{{url_for('Rand_data')}}#rand_data">The database can be seen here</a></li>
+                              <li><i class="ion-ios-checkmark-empty icon-small"></i><a href="{{url_for('Random_Forst_Class_model')}}">The model can be found here</a></li>
+                          </ul>
+                      </div>
+                      <div>
+                          <a href="{{url_for('Random_Forst_Class')}}#randforstt" class="btn btn-full">Scan</a>
+                      </div>
+                  </div>
+              </div>
+                <div class="col span-1-of-3">
+                    <div class="plan-box js--wp-4">
+                        <div>
+                            <h3>Logistic Regression</h3>
+                            <p class="plan-price">>60% <span>/ accuracy</span></p>
+                            <p class="plan-price-meal">ln(p/1-p) = b0 + b1 * X</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>For All Farmers and Experts</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Functional 24/7</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Access to well train data</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i><a href="{{url_for('Logistic_modle')}}">The model can be found here</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="{{url_for('Logistic_Reg')}}#logisticreg" class="btn btn-full">Scan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col span-1-of-3">
+                    <div class="plan-box">
+                        <div>
+                            <h3>SVM Classification</h3>
+                            <p class="plan-price">>50% <span>/ accuracy</span></p>
+                            <p class="plan-price-meal">ϕγ (x, ℓ) = exp (−γ֫  || x − ℓ || 2)</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>For All Farmers and Experts</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Functional 24/7</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Access to well train data</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i><a href="{{url_for('SVM_Clasif_model')}}">The model can be found here</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="{{url_for('SVM_Clasif')}}#svm" class="btn btn-ghost">Scan</a>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+
+        <section class="section-cities" id="cities">
+            <div class="row">
+                <h2></h2>
+            </div>
+            <div class="row js--wp-3">
+                <div class="col span-1-of-4 box">
+                    <h3>Addis Ababa</h3>
+                    <div class="city-feature">
+                        <i class="ion-ios-person icon-small"></i>
+                        1600+ happy customers
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-ios-star icon-small"></i>
+                        60+ Farmers
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-social-twitter icon-small"></i>
+                        <a href="#">@agri_analytics</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <h3>Amhara</h3>
+                    <div class="city-feature">
+                        <i class="ion-ios-person icon-small"></i>
+                        3700+ happy customers
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-ios-star icon-small"></i>
+                        160+ Farmers
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-social-twitter icon-small"></i>
+                        <a href="#">@agri_analytics</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <h3>Oromiya</h3>
+                    <div class="city-feature">
+                        <i class="ion-ios-person icon-small"></i>
+                        2300+ happy customers
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-ios-star icon-small"></i>
+                        110+ Farmers
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-social-twitter icon-small"></i>
+                        <a href="#">@agri_analytics</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <h3>Tigray</h3>
+                    <div class="city-feature">
+                        <i class="ion-ios-person icon-small"></i>
+                        1200+ happy customers
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-ios-star icon-small"></i>
+                        50+ Farmers
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-social-twitter icon-small"></i>
+                        <a href="#">@agri_analytics</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section-testimonials" id="Authors">
+            <div class="row">
+                <h2>Authors to all</h2>
+            </div>
+            <div class="row">
+                <div class="col" style="width: 800px; padding-left: 200px">
+                    <blockquote>
+                      We trust in data for it gives us no lie, no falisy for it is the future by which we build our greatest dreams and in this dream today we work to strive better for the simple farmers to dream and live with us. Through this dream we shall and will improve the way of life for the better.
+                      So beautiful and magnificent to give life but more so to learn them, to master them, to live them for we understand them more and in data every thing could be seen. We hope to show all the importance of data in agriculture and see what is keept to be reveled.
+                      I looked  to the skys and the numbers blinded me, I looked to the ground the patterns have taken me, I looked in the eyes of the living there pulse griped me, I looked every where and all was with complexity and beautiful patterns and I strived to learn it all for it gives life for every thing.
+                         <cite><img src="../static/resources/img/dawit1.jpg" alt="Customer 2 photo">Dawit Yilma</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="section-form">
+            <div class="row">
+                <h2>We're happy to hear from you</h2>
+            </div>
+            <div class="row">
+                <form method="post" action="#" class="contact-form">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="Your email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="find-us">How did you find us?</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <select name="find-us" id="find-us">
+                                <option value="friends" selected>Friends</option>
+                                <option value="search">Search engine</option>
+                                <option value="ad">Advertisement</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Drop us a line</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea name="message" placeholder="Your message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Send it!">
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">iOS App</a></li>
+                        <li><a href="#">Android App</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    Copyright &copy; 2015 by Agriculture Analytics. All rights reserved.
+                </p>
+            </div>
+        </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src="../static/vendors/js/jquery.waypoints.min.js"></script>
+    <script src="../static/resources/js/script.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61026110-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    </body>
+
+</html>

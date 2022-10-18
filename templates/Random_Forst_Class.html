@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+      <form class="section-features js--section-features" action="/predict_random_forst#resultrandforst" method="post" id="randforstt">
+
+        <div class="row">
+          <h2>Enter The Values Collected &mdash; See Example:</h2>
+          <h3>Example:</h3>
+          <p class="long-copy">
+          -0.764418387  0.105779259 0.275373833 0.153212739 0.232376326 0.114285059 0.282305001 -0.124457667  0.020908724 0.186270461
+          </p>
+          <div class="col-sm-10">
+            <textarea class="form-control" rows="5" id="space" name="space">None</textarea>
+
+          </div>
+
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" value="Scan">
+        </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+
+
+  </div>
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Omnifood is a premium food delivery service with the mission to bring affordable and healty meals to as many people as possible.">
+
+        <link rel="stylesheet" type="text/css" href="../static/vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../static/vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="../static/vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="../static/vendors/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="../static/resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../static/resources/css/queries.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <title>Agriculture Analytics</title>
+
+        <link rel="apple-touch-icon" sizes="57x57" href="../static/resources/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../static/resources/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../static/resources/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../static/resources/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../static/resources/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../static/resources/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../static/resources/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../static/resources/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../static/resources/favicons/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="../static/resources/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="../static/resources/favicons/favicon-194x194.png" sizes="194x194">
+        <link rel="icon" type="image/png" href="../static/resources/favicons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="../static/resources/favicons/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="../static/resources/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="../static/resources/favicons/manifest.json">
+        <link rel="shortcut icon" href="../static/resources/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="../static/resources/favicons/mstile-144x144.png">
+        <meta name="msapplication-config" content="../static/resources/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="row">
+                  <a href="{{url_for('index')}}">
+                    <img src="../static/resources/img/agri2.png" alt="Omnifood logo" class="logo">
+                    </a>
+                    <img src="../static/resources/img/agri2.png" alt="Omnifood logo" class="logo-black">
+                    <ul class="main-nav js--main-nav">
+                        <li><a href="#production_analysis">Production Analysis</a></li>
+                        <li><a href="#Productivity_analysis">Yield Analysis</a></li>
+                        <li><a href="#Authors">Authors</a></li>
+                        <li><a href="#plans">Sign up</a></li>
+                    </ul>
+                    <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+                </div>
+            </nav>
+            <div class="hero-text-box">
+                <h1>Wellcome to Agriculture Analytics.<br>With us you will have a  better results.</h1>
+
+
+
+                <a  href="{{url_for('Polynomial_reg')}}#polyregg" class="btn btn-full js--scroll-to-plans">Predict Production</a>
+                <a class="btn btn-ghost js--scroll-to-start" href="{{url_for('Random_Forst_Class')}}#randforstt">Predict Productivity/Yield</a>
+            </div>
+ 	</header>
+              <form class="section-features js--section-features" id="rand_data" action="{{url_for('polydownload')}}" enctype="multipart/form-data">
+
+                <h2>Data Base &mdash; Random Forest</h2>
+                <div class="row">
+				<h4>Max Temprature | Humidity | D22a_DAP | D22a_Urea_DAP | Dreason_Insects | D22a_Urea_NPS | D23_Manure | Area | Yield | Irrg_No</h4>
+			</div>
+				{% for i in range(lengp)%}
+    			<p>{{randall[i]}}</p>
+    			{%endfor%}
+
+
+        	</form>
+                      <div class="col-sm-offset-2 col-sm-10">    
+        {{text|safe}}
+        {% include btn ignore missing %}
+      </div>
+
+
+</body>
+</html>
